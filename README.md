@@ -7,6 +7,7 @@ Clone this repository into _~/.OSX-dotfiles_, change directory into _~/.OSX-dotf
     git clone git://github.com/Fl4t/OSX-dotfiles.git ~/OSX-dotfiles
     cd ~/OSX-dotfiles
     rake install
+    git submodule update --init --recursive
 
 Rake will **never** replace existing files but back them up into *~/.dotfiles_backup*. The dot files will be symbolically linked into the home directory. Templates will be rendered in place then symbolically linked.
 ## Environment
