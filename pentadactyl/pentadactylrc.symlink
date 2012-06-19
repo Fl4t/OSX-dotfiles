@@ -1,0 +1,28 @@
+"hg6757
+
+loadplugins '\.(js|penta)$'
+group user
+highlight -link=FontFixed CmdLine padding: 0px !important; font: normal 12px 'Monaco' !important;
+highlight CmdOutput font: normal 12px 'Monaco' !important;
+highlight CompItem font: normal 12px 'Monaco' !important;
+highlight Find background: #d6c149; color: #000;
+highlight Hint font-size: 14px; background: rgba(210,1,133,0.8) !important; border: 2px solid rgb(165,1,105); padding: 4px; border-radius: 3px; font-weight: bold; margin-left: -25px; color: white; font-family: Helvetica; line-height:1em;
+highlight HintActive background: rgba(145,197,43,0.8)    !important;
+highlight HintElem background: rgba(255, 209, 20, 0.7) !important;
+highlight -link=FontFixed StatusLine -moz-appearance: none !important; font-weight: bold; background: transparent !important; border: 0px !important; min-height: 0px !important; text-shadow: none !important; font: normal 12px/1 'Monaco' !important; padding: 0px 0px 0px 5px !important;
+map -count -modes=n j -builtin <count>3j
+map -count -modes=n k -builtin <count>3k
+map -count -modes=n gI -builtin <count>2gi
+map -count -modes=n <BS> -builtin <Nop>
+map -count -modes=n <Leader><Space> -builtin <count><Esc>:noh<Return>
+set defsearch=duckduckgo
+set editor='/usr/local/bin/mvim -f +<line> <file>'
+set followhints=1
+set guioptions=Cs
+set hintkeys=qzefjiom
+set hlfind
+set runtimepath=/Users/warez/.pentadactyl
+set showstatuslinks=command
+set showtabline=multitab
+
+" vim: set ft=pentadactyl:
