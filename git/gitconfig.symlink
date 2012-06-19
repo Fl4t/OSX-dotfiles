@@ -1,0 +1,17 @@
+[user]
+	name = julien@macbook
+	email = julien.stechele@gmail.com
+[core]
+	excludesfile = /Users/warez/.gitignore_global
+	autocrlf = input
+[merge]
+	tool = mvimdiff
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+[help]
+	autocorrect = 1
+[apply]
+	whitespace = nowarn
