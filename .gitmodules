@@ -4,3 +4,6 @@
 [submodule "vim/vim.symlink"]
 	path = vim/vim.symlink
 	url = https://github.com/Fl4t/Dotvim.git
+[submodule "GOMstreamer"]
+	path = GOMstreamer
+	url = https://github.com/sjp/GOMstreamer.git
