@@ -1,2 +1,7 @@
 pentadactyl/pentadactyl.symlink/info/
+
+# weechat
 weechat/weechat.symlink/irc.conf
+weechat/weechat.symlink/logs/
+weechat/weechat.symlink/wg.conf
+weechat/weechat.symlink/xfer.conf
