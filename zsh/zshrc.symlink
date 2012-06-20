@@ -84,8 +84,8 @@ alias sv='sudo vim'
 alias gvim='mvim --remote-silent'
 
 # Souvent modifié
-alias vimrc='vim ~/.vim/vimrc'
-alias gvimrc='vim ~/.vim/gvimrc'
+alias vimrc='vim ~/.vimrc'
+alias gvimrc='vim ~/.gvimrc'
 alias zshrc='vim ~/.zshrc'
 alias sozsh='source ~/.zshrc'
 
