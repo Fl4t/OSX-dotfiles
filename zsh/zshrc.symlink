@@ -98,7 +98,6 @@ alias ping='ping -c 5'
 alias mysql='mysql -u root -p'
 
 # shortcut
-alias rm='rm -rf'
 alias q='exit'
 alias c='clear'
 alias wee='weechat-curses'
