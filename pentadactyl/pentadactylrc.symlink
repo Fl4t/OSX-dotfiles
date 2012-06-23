@@ -2,11 +2,11 @@
 
 loadplugins '\.(js|penta)$'
 group user
-highlight -link=FontFixed CmdLine padding: 0px !important; font: normal 12px 'Monaco' !important;
-highlight CmdOutput font: normal 12px 'Monaco' !important;
-highlight CompItem font: normal 12px 'Monaco' !important;
+highlight -link=FontFixed CmdLine padding: 0px !important; font: normal 13px 'Monaco' !important;
+highlight CmdOutput font: normal 13px 'Monaco' !important;
+highlight CompItem font: normal 13px 'Monaco' !important;
 highlight Find background: #d6c149; color: #000;
-highlight -link=FontFixed StatusLine -moz-appearance: none !important; font-weight: bold; background: transparent !important; border: 0px !important; min-height: 0px !important; text-shadow: none !important; font: normal 12px/1 'Monaco' !important; padding: 0px 0px 0px 5px !important;
+highlight -link=FontFixed StatusLine -moz-appearance: none !important; font-weight: bold; background: transparent !important; border: 0px !important; min-height: 0px !important; text-shadow: none !important; font: normal 13px/1 'Monaco' !important; padding: 0px 0px 0px 5px !important;
 map -count -modes=n <BS> -builtin <Nop>
 map -count -modes=n <Leader><Space> -builtin <count><Esc>:noh<Return>
 set guioptions=Cs
