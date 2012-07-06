@@ -1,4 +1,4 @@
-"hg6776
+"hg6780
 
 loadplugins '\.(js|penta)$'
 group user
@@ -12,5 +12,7 @@ map -count -modes=n <Leader><Space> -builtin <count><Esc>:noh<Return>
 set guioptions=Cs
 set hintkeys=qzefjiom
 set hlfind
+set showstatuslinks=command
+set titlestring=''
 
 " vim: set ft=pentadactyl:
