@@ -1,4 +1,4 @@
-"hg6780
+"hg6821
 
 loadplugins '\.(js|penta)$'
 group user
@@ -9,6 +9,8 @@ highlight Find background: #d6c149; color: #000;
 highlight -link=FontFixed StatusLine -moz-appearance: none !important; font-weight: bold; background: transparent !important; border: 0px !important; min-height: 0px !important; text-shadow: none !important; font: normal 13px/1 'Monaco' !important; padding: 0px 0px 0px 5px !important;
 map -count -modes=n <BS> -builtin <Nop>
 map -count -modes=n <Leader><Space> -builtin <count><Esc>:noh<Return>
+map -count -modes=n,v h <count>H
+map -count -modes=n,v l <count>L
 set guioptions=Cs
 set hintkeys=qzefjiom
 set hlfind
