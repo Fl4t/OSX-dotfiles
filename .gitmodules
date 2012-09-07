@@ -1,7 +1,3 @@
-[submodule "zsh/oh-my-zsh.symlink"]
-	path = zsh/oh-my-zsh.symlink
-	url = https://github.com/sorin-ionescu/oh-my-zsh.git
-  ignore = dirty
 [submodule "vim/vim.symlink"]
 	path = vim/vim.symlink
 	url = https://github.com/Fl4t/Dotvim.git
