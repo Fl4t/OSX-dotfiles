@@ -21,9 +21,6 @@ export VISUAL='mvim -v'
 # vimpager
 alias less='vimpager'
 
-# Pull de tout les submodules (a verifier)
-alias gSP='git submodule foreach git pull origin master'
-
 # Vim aliases
 alias v='vim'
 alias sv='sudo vim'
