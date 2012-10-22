@@ -12,7 +12,7 @@ map -count -modes=n <Leader><Space> -builtin <count><Esc>:noh<Return>
 map -count -modes=n,v h <count>H
 map -count -modes=n,v l <count>L
 set guioptions=Cs
-set hintkeys=qzefjiom
+set hintkeys=abcdefghijklmnopqrstuvxyz
 set hlfind
 set showstatuslinks=command
 set titlestring=''
