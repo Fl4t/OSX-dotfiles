@@ -9,4 +9,3 @@ set nocompatible       " leave the old ways behind...
 syntax on               " activer les couleurs
 colorscheme solarized   " colorscheme
 set bg=dark             " version sombre de solarized
-"
