@@ -3,6 +3,7 @@ require 'rake'
 desc "Hook our dotfiles into system-standard positions."
 task :install do
   linkables = Dir.glob('*/**/**{.symlink}')
+  linkables += Dir.glob('*/zprezto.symlink/runcoms/z*')
 
   skip_all = false
   overwrite_all = false
@@ -36,7 +37,9 @@ end
 
 task :uninstall do
 
-  Dir.glob('**/**/*.symlink').each do |linkable|
+  linkables = Dir.glob('*/**/**{.symlink}')
+  linkables += Dir.glob('*/zprezto.symlink/runcoms/z*')
+  linkables.each do |linkable|
 
     file = linkable.split('/').last.split('.symlink').last
     target = "#{ENV["HOME"]}/.#{file}"
