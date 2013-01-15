@@ -16,5 +16,4 @@ set hintkeys=abcdefghijklmnopqrstuvxyz
 set hlfind
 set showstatuslinks=command
 set titlestring=''
-
-" vim: set ft=pentadactyl:
+colorscheme solarized-dark
