@@ -2,10 +2,6 @@
 	path = vim/vim.symlink
 	url = https://github.com/Fl4t/Dotvim.git
   ignore = dirty
-[submodule "GOMstreamer"]
-	path = GOMstreamer
-	url = https://github.com/sjp/GOMstreamer.git
-  ignore = dirty
 [submodule "zsh/zprezto.symlink"]
 	path = zsh/zprezto.symlink
 	url = https://github.com/Fl4t/prezto.git
