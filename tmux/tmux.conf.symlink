@@ -85,4 +85,4 @@ bind c-f send-prefix
 # Autorename sanely.
 setw -g automatic-rename on
 
-source '/Users/warez/.powerline/powerline/bindings/tmux/powerline.conf'
+source ~/.powerline/powerline/bindings/tmux/powerline.conf
