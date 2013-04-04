@@ -24,11 +24,19 @@ set-window-option -g utf8 on
 # it's still fundamentally broken?
 set -g default-command "reattach-to-user-namespace -l zsh"
 
-# Less stretching to get to the first item.
-set -g base-index 1
-setw -g pane-base-index 1
+# Activity
+#set-window-option -g window-status-activity-attr bold,blink,underscore
+
+# Autorename sanely.
+setw -g automatic-rename on
+
+source ~/.powerline/powerline/bindings/tmux/powerline.conf
 
 # Bindings {{{
+# Last active window
+unbind C-f
+bind-key C-f last-window
+
 # Reload the config.
 bind r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
 
@@ -78,11 +86,3 @@ set -g prefix C-f
 unbind C-b
 bind c-f send-prefix
 # }}}
-
-# Activity
-#set-window-option -g window-status-activity-attr bold,blink,underscore
-
-# Autorename sanely.
-setw -g automatic-rename on
-
-source ~/.powerline/powerline/bindings/tmux/powerline.conf
