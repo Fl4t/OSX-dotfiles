@@ -77,6 +77,7 @@ bind p paste-buffer
 bind -t vi-copy H start-of-line
 bind -t vi-copy L end-of-line
 bind -t vi-copy v begin-selection
+bind -t vi-copy V rectangle-toggle
 bind -t vi-copy y copy-selection
 bind -t vi-copy Escape cancel
 bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
