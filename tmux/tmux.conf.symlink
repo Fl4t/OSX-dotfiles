@@ -17,6 +17,9 @@ set -sg repeat-time 600
 # Set 256-colour terminal
 set -g default-terminal "screen-256color"
 
+# enable xterm keys
+setw -g xterm-keys on
+
 # UTF-8
 set-window-option -g utf8 on
 
