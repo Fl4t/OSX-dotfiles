@@ -17,3 +17,5 @@
 	whitespace = nowarn
 [credential]
 	helper = osxkeychain
+[diff]
+	algorithm = patience
