@@ -5,7 +5,7 @@
 	excludesfile = /Users/warez/.gitignore_global
 	autocrlf = input
 [merge]
-	tool = mvimdiff
+	tool = vimdiff
 [color]
 	status = auto
 	branch = auto
