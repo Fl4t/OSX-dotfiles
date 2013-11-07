@@ -23,20 +23,21 @@ set -g default-terminal "screen-256color"
 # enable xterm keys
 setw -g xterm-keys on
 
+# history crollback
+set -g history-limit 10000
+
 # UTF-8
-set-window-option -g utf8 on
+setw -g utf8 on
 
-# This is hilariously absurd. How many nerds use tmux on OS X every day and
-# it's still fundamentally broken?
-set -g default-command "reattach-to-user-namespace -l zsh"
-
-# Activity
-#set-window-option -g window-status-activity-attr bold,blink,underscore
+# Avoid resize of session when an another terminal is launched
+setw -g aggressive-resize on
 
 # Autorename sanely.
 setw -g automatic-rename on
 
-source ~/.powerline/powerline/bindings/tmux/powerline.conf
+# Rename the terminal emulator title to the correct host
+set -g set-titles on
+set -g set-titles-string "#T"
 
 # Bindings {{{
 # Last active window
@@ -59,7 +60,6 @@ bind -r C-l resize-pane -R 5
 # Saner splitting.
 bind v split-window -h
 bind s split-window -v
-bind S choose-session
 
 # Pane movement
 bind h select-pane -L
@@ -86,10 +86,20 @@ bind -t vi-copy v begin-selection
 bind -t vi-copy V rectangle-toggle
 bind -t vi-copy y copy-selection
 bind -t vi-copy Escape cancel
-bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+
+#Copy tmux paste buffer to CLIPBOARD
+bind C-c run "tmux show-buffer | xsel -i -b"
+#Copy CLIPBOARD to tmux paste buffer and paste tmux paste buffer
+bind C-v run "tmux set-buffer -- \"$(xsel -o -b)\"; tmux paste-buffer"
 
 # Use something easier to type as the prefix.
 set -g prefix C-f
 unbind C-b
 bind c-f send-prefix
+
+# Source my session
+bind R source-file ~/tmuxsession \; display "Session Loaded!"
 # }}}
+
+# Source powerline before to override if any
+source '/usr/share/tmux/powerline.conf'

@@ -119,8 +119,6 @@ highlight UsageItem:nth-of-type(2n) background: rgba(0, 43, 54, .04);
 highlight -link=s_base03,s_yellow_back WarningMsg
 map -count -modes=n <BS> -builtin <Nop>
 map -count -modes=n <Leader><Space> -builtin <count><Esc>:noh<Return>
-map -count -modes=n,v h <count>H
-map -count -modes=n,v l <count>L
 set guioptions=Cs
 set hintkeys=abcdefghijklmnopqrstuvxyz
 set hlfind

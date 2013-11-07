@@ -5,6 +5,3 @@
 [submodule "zsh/zprezto.symlink"]
 	path = zsh/zprezto.symlink
 	url = https://github.com/Fl4t/prezto.git
-[submodule "powerline/powerline.symlink"]
-	path = powerline/powerline.symlink
-	url = https://github.com/Lokaltog/powerline.git
