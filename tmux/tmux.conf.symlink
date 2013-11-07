@@ -1,11 +1,14 @@
+# vim: ft=tmux
+
 # Start windows and panes at 1, not 0
 set -g base-index 1
 set -g pane-base-index 1
 
 # Enable mouse support in ~/.tmux.conf
-set-option -g mouse-select-pane on
-set-option -g mouse-select-window on
-set-window-option -g mode-mouse on
+set -g mode-mouse on
+set -g mouse-select-pane on
+set -g mouse-resize-pane on
+set -g mouse-select-window on
 
 # zsh is kinda tight
 set-option -g default-shell $SHELL
