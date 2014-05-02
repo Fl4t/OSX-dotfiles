@@ -1,0 +1,61 @@
+#!/bin/sh
+#
+# ~/.xinitrc
+#
+# Executed by startx (run your window manager from here)
+
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+  for f in /etc/X11/xinit/xinitrc.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi
+
+# Load my Xressources when X starts
+xrdb -merge ~/.Xresources
+
+# adding my fonts to Xressources
+xset +fp /home/warez/fonts
+xset +fp /usr/share/fonts/misc
+xset fp rehash
+
+# Urxvt daemon
+urxvtd -q -f -o &
+
+# disable trackpad when typing
+syndaemon -t -k -i 1 -d &
+
+# xscreensaver
+/usr/bin/xscreensaver -no-splash &
+
+# a simple X hotkey daemon used to communicate with bspwm
+sxhkd &
+
+# Wallpaper
+hsetroot -fill /home/warez/Pictures/wallmac/wallpaper-2464896.jpg
+
+# shadow...
+# compton &
+
+# hide the cursors automaticaly
+unclutter &
+
+# set the cursor
+xsetroot -cursor_name left_ptr &
+
+# repeat rate keyboard
+xset r rate 200 45
+
+# bspwm
+export BSPWM_SOCKET="/tmp/bspwm-socket"
+export PANEL_FIFO="/tmp/panel-fifo"
+export PANEL_HEIGHT=24
+
+# disable DPMS When I watch movies
+~/.bin/lightsOn.sh 590 &
+
+# start xfce
+exec bspwm 2>&1 ~/bspwm.log
+
+# start the DE form /usr/share/xsessions
+# exec $1

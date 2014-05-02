@@ -1,0 +1,126 @@
+#
+# bspwm hotkeys
+#
+
+# make sxhkd reload its configuration files:
+super + shift + r
+        pkill -USR1 -x sxhkd
+
+super + {m,t}
+    bspc desktop -l {monocle,tiled}
+
+super + alt + Escape
+    pkill panel ; bspc quit
+
+# close the window
+super + {d,q,x}
+    bspc window -c
+
+# 50/50 ratio
+super + equal
+    bspc desktop -B
+
+# window floating, fullscreen
+super + {w,f}
+    bspc window -t {floating,fullscreen}
+
+# swap windows
+super + apostrophe
+    bspc window -s last
+
+super + {o,i}
+    bspc control --record-history off; \
+    bspc window {older,newer} -f; \
+    bspc control --record-history on
+
+super + y
+    bspc window -w last.manual
+
+super + m
+    bspc window -s biggest
+
+super + {_,shift + }{h,j,k,l}
+    bspc window -{f,s} {left,down,up,right}
+
+super + {_,shift + }Tab
+    bspc window -f {next,prev}
+
+super + {comma,semicolon}
+    bspc desktop -C {backward,forward}
+
+super + ctrl + {h,j,k,l}
+    bspc window -p {left,down,up,right}
+
+super + ctrl + {_,shift + }space
+    bspc {window -p cancel,desktop -c}
+
+super + alt + {h,j,k,l}
+    bspc window -e {left,down,up,right} push
+
+super + alt + shift + {h,j,k,l}
+    bspc window -e {right,up,down,left} pull
+
+super + {n,p}
+    bspc desktop -f {next,prev}
+
+super + {1-9,0}
+    bspc window -d ^{1-9,10}
+
+~button1
+    bspc pointer -g focus
+
+super + button{1-3}
+    bspc pointer -g {move,resize_side,resize_corner}
+
+super + !button{1-3}
+    bspc pointer -t %i %i
+
+super + @button{1-3}
+    bspc pointer -u
+
+#
+# wm independent hotkeys
+#
+
+super + Return
+    urxvtc
+
+super + colon
+    gmrun
+
+super + BackSpace
+    xscreensaver-command --lock
+
+# super + {alt,ctrl,alt + ctrl} + XF86Eject
+#     sudo systemctl {suspend,reboot,poweroff}
+
+#
+# sound
+#
+
+XF86Audio{Lower,Raise}Volume
+        amixer -q set Master 5%{-,+}
+
+XF86AudioMute
+        amixer -q set Master toggle
+
+XF86AudioPlay
+        ncmpcpp toggle
+
+XF86Audio{Prev,Next}
+        ncmpcpp {prev,next}
+
+#
+# brightness
+#
+
+{_,super +}XF86KbdBrightness{Down,Up}
+        kbdlight {down,off,up,max}
+
+#
+# backlight
+#
+
+{_,super +}XF86MonBrightness{Down,Up}
+        xbacklight {-dec 10,-set 0,-inc 10, -set 100}
+

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Usage: volume up
+#        volume down
+#        volume toggle
+
+case $1 in
+	"up")     amixer -q set Master 5%+ ;;
+	"down")   amixer -q set Master 5%- ;;
+	"toggle") amixer -q set Master toggle ;;
+esac
+
+if [[ $(amixer get Master | grep % | cut -d'[' -f4 | sed 's/\]//') == "off" ]]; then
+  echo "M" > $HOME/.volume
+else
+	echo $(amixer -M get Master | grep % | cut -d% -f1 | cut -d'[' -f2) > $HOME/.volume
+fi

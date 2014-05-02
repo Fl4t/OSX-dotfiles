@@ -1,0 +1,16 @@
+#! /bin/sh
+
+bspc monitor -d "term" "web" "fun" "work" "misc"
+
+bspc config border_width 2
+bspc config window_gap 20
+bspc config split_ratio 0.5
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
+bspc config normal_border_color "#002b36" #S_base03
+bspc config focused_border_color "#657b83" # S_base0
+bspc config presel_border_color "#b58900"
+bspc config urgent_border_color "#dc322f"
+
+/home/warez/.config/bspwm/panel/panel &

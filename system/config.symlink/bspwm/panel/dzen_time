@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# sources variables
+. ~/.config/bspwm/panel/panel_colors
+
+# cal && sleep 5 | dzen2 -w '50' -h '50' -bg $COLOR_BACKGROUND -fg $COLOR_FOREGROUND -x '640' -y '400' -fn "${FONT_FAMILY}:pixelsize=${FONT_SIZE}" -dock & 2> ~/calendar.log
+(date) | dzen2 -fn "${FONT_FAMILY}:pixelsize=${FONT_SIZE}" -bg $COLOR_BACKGROUND -fg $COLOR_FOREGROUND -p 2 -x '1175' -y '21' -dock & 2> ~/calendar.log

@@ -1,0 +1,235 @@
+! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
+URxvt*depth: 32
+
+! Compile xft: Turn on/off double-buffering for xft (default enabled).  On some card/driver combination enabling it slightly decreases performance, on most it greatly helps it. The slowdown is
+! URxvt*buffered: boolean
+
+! Set MWM hints to request a borderless window, i.e. if honoured by the WM, the rxvt-unicode window will not have window decorations; option -bl.
+! URxvt*borderLess: true
+
+! Create the window with the specified X window geometry [default 80x24]; option -geometry.
+URxvt*geometry: 200x50
+
+! If set, use the specified colour as the background for highlighted characters. If unset, use reverse video.
+! URxvt*highlightColor: colour
+
+! If set and highlightColor is set, use the specified colour as the foreground for highlighted characters.
+! URxvt*highlightTextColor: colour
+
+! Use the specified colour for the cursor. The default is to use the foreground colour; option -cr.
+! URxvt*cursorColor: colour
+
+! Use the specified colour for the colour of the cursor text. For this to take effect, cursorColor must also be specified. The default is to use the background colour.
+! URxvt*cursorColor2: colour
+
+! True: simulate reverse video by foreground and background colours; option -rv. False: regular screen colours [default]; option +rv. See note in COLOURS AND GRAPHICS section.
+! URxvt*reverseVideo: boolean
+
+! Fade the text by the given percentage when focus is lost; option -fade.
+! URxvt*fading: number
+
+! Fade to this colour, when fading is used (see fading:). The default colour is black; option -fadecolor.
+! URxvt*fadeColor: colour
+
+! This will cause the shell to be started as a login shell, like the option -ls.
+! URxvt*loginShell: true
+
+! By default URxvt does not feature a taskbar icon.
+! URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/Terminal.svg
+
+! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters. The first font defines the cell size for
+!URxvt*font: xft:PragmataPro for Powerline:size=9
+!URxvt*boldFont: xft:PragmataPro Bold for Powerline:size=9
+!URxvt*italicFont: xft:PragmataPro Italic for Powerline:size=9
+!URxvt*boldItalicFont: xft:PragmataPro Bold Italic for Powerline:size=9
+
+URxvt*font: xft:PragmataPro\ for\ Powerline:size=9:antialias=true
+URxvt*boldFont: xft:PragmataPro\ for\ Powerline:style=Bold:size=9:antialias=true
+URxvt*italicFont: xft:PragmataPro\ for\ Powerline:style=Italic:size=9:antialias=true
+URxvt*boldItalicFont: xft:PragmataPro\ for\ Powerline:style=Bold Italic:size=9:antialias=true
+
+!-- Xft settings -- !
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+! When font styles are not enabled, or this option is enabled (True, option -is, the default), bold/blink font styles imply high intensity foreground/background colours. Disabling this option
+URxvt*intensityStyles: False
+
+! True: set the urgency hint for the wm on receipt of a bell character.  False: do not set the urgency hint [default].
+URxvt*urgentOnBell: True
+
+! True: use visual bell on receipt of a bell character; option -vb.  False: no visual bell [default]; option +vb.
+!URxvt*visualBell: True
+
+! True: enable the scrollbar [default]; option -sb. False: disable the scrollbar; option +sb.
+URxvt*scrollBar: False
+
+! True: scroll to bottom when tty receives output; option -si.  False: do not scroll to bottom when tty receives output; option +si.
+! URxvt*scrollTtyOutput: boolean
+
+! Compile frills: Disable the usage of the built-in block graphics/line drawing characters and just rely on what the specified fonts provide. Use this if you have a good font and want to use its
+!URxvt*skipBuiltinGlyphs: True
+
+! Specifies the terminal type name to be set in the TERM environment variable; option -tn.
+URxvt*termName: screen-256color
+
+! True: blink the cursor. False: do not blink the cursor [default]; option -bc.
+! URxvt*cursorBlink: boolean
+
+! True: Make the cursor underlined. False: Make the cursor a box [default]; option -uc.
+! URxvt*cursorUnderline: boolean
+
+! True: blank the pointer when a key is pressed or after a set number of seconds of inactivity. False: the pointer is always visible [default].
+URxvt*pointerBlank: True
+
+! Set the key to be interpreted as the Meta key to: alt, meta, hyper, super, mod1, mod2, mod3, mod4, mod5; option -mod.
+! URxvt*modifier: modifier
+
+! Yankable URLs (No Mouse)
+! In addition, you can select and open URLs in your web browser without using the mouse.
+URxvt.perl-ext:      default,url-select
+URxvt.keysym.C-i:    perl:url-select:select_next
+URxvt.url-select.launcher:   /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
+URxvt.colorUL: #4682B4
+
+! Save number lines to 0 (tmux do it)
+URxvt.saveLines: 0
+
+! Change font size on the fly
+URxvt.perl-ext-common:  font-size
+
+! and add some key bindings, for example like this:
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+
+!For the suggested Ctrl+Shift bindings to work, a default binding needs to be disabled
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
+
+
+! Common
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+
+URxvt*background:              S_base03
+URxvt*foreground:              S_base0
+URxvt*fading:                  40
+URxvt*fadeColor:               S_base03
+URxvt*cursorColor:             S_base1
+URxvt*pointerColorBackground:  S_base01
+URxvt*pointerColorForeground:  S_base1
+
+URxvt*color0:                  S_base02
+URxvt*color1:                  S_red
+URxvt*color2:                  S_green
+URxvt*color3:                  S_yellow
+URxvt*color4:                  S_blue
+URxvt*color5:                  S_magenta
+URxvt*color6:                  S_cyan
+URxvt*color7:                  S_base2
+URxvt*color9:                  S_orange
+URxvt*color8:                  S_base03
+URxvt*color10:                 S_base01
+URxvt*color11:                 S_base00
+URxvt*color12:                 S_base0
+URxvt*color13:                 S_violet
+URxvt*color14:                 S_base1
+URxvt*color15:                 S_base3
+
+! Dzen
+
+!dzen2*font: xft:PragmataPro for Powerline:size=8
+!dzen2.foreground: S_base1
+!dzen2.background: #000000
+!
+
+! xscreensaver ---------------------------------------------------------------
+
+!font settings
+xscreensaver.Dialog.headingFont:        -*-georgia-bold-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-georgia-medium-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-georgia-medium-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-georgia-medium-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-georgia-bold-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-georgia-medium-r-*-*-18-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-georgia-bold-r-*-*-18-*-*-*-*-*-*-*
+!general dialog box (affects main hostname, username, password text)
+xscreensaver.Dialog.foreground:         S_base0
+xscreensaver.Dialog.background:         S_base03
+xscreensaver.Dialog.topShadowColor:     S_base03
+xscreensaver.Dialog.bottomShadowColor:  S_base03
+xscreensaver.Dialog.Button.foreground:  S_base03
+xscreensaver.Dialog.Button.background:  S_base0
+!username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:    S_base03
+xscreensaver.Dialog.text.background:    S_base0
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        20
+xscreensaver.Dialog.borderColor:        S_base0
+xscreensaver.Dialog.shadowThickness:    2
+!timeout bar (background is actually determined by Dialog.text.background)
+xscreensaver.passwd.thermometer.foreground:  S_base0
+xscreensaver.passwd.thermometer.background:  S_base03
+xscreensaver.passwd.thermometer.width:       0
+!datestamp format--see the strftime(3) manual page for details
+xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+
+! Xcursor --------------------------------------------------------------------
+
+!Xcursor.theme: Vanilla-DMZ-AA
+!Xcursor.size:  12
+
+! Normal
+*URxvt*keysym.Home:     \033OH
+*URxvt*keysym.End:      \033OF
+*URxvt*keysym.F1:       \033OP
+*URxvt*keysym.F2:       \033OQ
+*URxvt*keysym.F3:       \033OR
+*URxvt*keysym.F4:       \033OS
