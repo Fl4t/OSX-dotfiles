@@ -10,6 +10,9 @@ set -g mouse-select-pane on
 set -g mouse-resize-pane on
 set -g mouse-select-window on
 
+# re-number windows when one is closed
+set -g renumber-windows on
+
 # zsh is kinda tight
 set-option -g default-shell $SHELL
 
@@ -33,7 +36,7 @@ setw -g utf8 on
 setw -g aggressive-resize on
 
 # Autorename sanely.
-setw -g automatic-rename on
+setw -g automatic-rename off
 
 # Rename the terminal emulator title to the correct host
 set -g set-titles on
