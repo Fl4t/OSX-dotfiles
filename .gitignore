@@ -10,3 +10,9 @@ weechat/weechat.symlink/script/
 weechat/weechat.symlink/wg.conf
 weechat/weechat.symlink/xfer.conf
 weechat/weechat.symlink/aspell.conf
+weechat/weechat.symlink/alias.conf
+weechat/weechat.symlink/logger.conf
+weechat/weechat.symlink/charset.conf
+weechat/weechat.symlink/relay.conf
+weechat/weechat.symlink/rmodifier.conf
+weechat/weechat.symlink/script.conf
